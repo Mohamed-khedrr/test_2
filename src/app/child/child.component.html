@@ -1,0 +1,13 @@
+<div #scrollable class="scroll-container" (scroll)="onscroll()">
+  <button (click)="onscroll()">clic me</button>
+  <ul>
+    @for (item of objArr.arr; track $index) {
+    <li>
+      {{item}}
+    </li>
+    }
+    @if(loading){
+    <h2>Loading ... </h2>
+    }
+  </ul>
+</div>
